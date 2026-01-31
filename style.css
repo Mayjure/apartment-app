@@ -109,6 +109,13 @@ button:hover {
 }
 
 /* =====================
+   TEXT UTILITIES
+===================== */
+.center-text {
+    text-align: center;
+}
+
+/* =====================
    ANIMATION
 ===================== */
 @keyframes fadeIn {
