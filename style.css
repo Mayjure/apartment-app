@@ -121,3 +121,52 @@ button:hover {
         transform: translateY(0);
     }
 }
+
+/* =====================
+   PAYMENT INSTRUCTIONS
+===================== */
+.payment-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: #fff3cd;
+    border: 2px solid #ff9800;
+    border-radius: 8px;
+}
+
+.payment-box h2 {
+    color: #b30000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.payment-warning {
+    background: #ffe0b2;
+    padding: 10px;
+    border-left: 5px solid #ff5722;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.payment-details {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.payment-details li {
+    margin-bottom: 8px;
+}
+
+.payment-methods {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.payment-note {
+    font-size: 13px;
+    color: #444;
+    text-align: center;
+}
