@@ -1,117 +1,123 @@
-/* ===================== */
-/* Global Reset          */
-/* ===================== */
+/* =====================
+   GLOBAL RESET & BASE
+===================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ===================== */
-/* Page Background       */
-/* ===================== */
+/* =====================
+   PAGE BACKGROUND
+===================== */
 body {
-    background: #f4f4f4;
+    background: linear-gradient(135deg, #8b0000, #ff8c00, #ffd700);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #222;
 }
 
-/* ===================== */
-/* Main Container        */
-/* ===================== */
+/* =====================
+   MAIN CONTAINER
+===================== */
 .container {
-    max-width: 650px;
-    margin: 40px auto;
     background: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.6s ease-in-out;
 }
 
-/* ===================== */
-/* Header Styles         */
-/* ===================== */
+/* =====================
+   HEADINGS
+===================== */
 h1 {
     text-align: center;
+    color: #b30000;
     margin-bottom: 10px;
 }
 
-.price {
+h2 {
     text-align: center;
-    font-size: 22px;
-    font-weight: bold;
+    color: #ff8c00;
     margin-bottom: 20px;
 }
 
-/* ===================== */
-/* Details Box           */
-/* ===================== */
-.details {
-    background: #eef6ff;
+/* =====================
+   INFO BLOCK
+===================== */
+.info {
+    background: #fff4e6;
+    border-left: 6px solid #ff8c00;
     padding: 15px;
     margin-bottom: 20px;
+    border-radius: 5px;
 }
 
-.details ul {
-    list-style: none;
-}
-
-.details li {
-    margin-bottom: 6px;
-}
-
-/* ===================== */
-/* Call To Action        */
-/* ===================== */
-.cta {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* ===================== */
-/* Form Styling          */
-/* ===================== */
+/* =====================
+   FORM ELEMENTS
+===================== */
 label {
     display: block;
-    margin-top: 12px;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
-input,
-textarea {
+input, textarea, select {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-size: 15px;
 }
 
-/* ===================== */
-/* Submit Button         */
-/* ===================== */
+/* =====================
+   CALL-TO-ACTION BUTTON
+===================== */
 button {
     width: 100%;
-    margin-top: 20px;
+    background: linear-gradient(90deg, #b30000, #ff4500);
+    color: white;
     padding: 14px;
-    background: #27ae60;
-    color: #ffffff;
     border: none;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 button:hover {
-    background: #219150;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* ===================== */
-/* Disclaimer Text       */
-/* ===================== */
-.disclaimer {
-    margin-top: 15px;
-    font-size: 12px;
-    text-align: center;
+/* =====================
+   SMALL TEXT
+===================== */
+.small-text {
+    font-size: 13px;
     color: #555;
+    text-align: center;
+    margin-top: 10px;
 }
 
+/* =====================
+   ANIMATION
+===================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
