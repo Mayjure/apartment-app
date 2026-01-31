@@ -116,6 +116,14 @@ button:hover {
 }
 
 /* =====================
+   CENTERED LIST FIX
+===================== */
+.center-text ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+/* =====================
    ANIMATION
 ===================== */
 @keyframes fadeIn {
