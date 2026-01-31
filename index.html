@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1BR Shared Apartment – Apply Now!</title><br>
+    <title>1BR Shared Apartment Application – Apply Now!</title><br>
 
     <!-- ===================== -->
     <!-- Stylesheet Link       -->
@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- =====================
+     AVAILABLE BADGE
+===================== -->
+<div class="badge center-text">
+    <strong>Available Immediately!</strong>
+</div>
 
     <!-- ===================== -->
     <!-- Main Container        -->
@@ -25,12 +32,6 @@
         <p class="price">$125 / week - Move In Fast Upon Qualification!</p><br>
 
         
-<!-- =====================
-     AVAILABLE BADGE
-===================== -->
-<div class="badge center-text">
-    <strong>Available Immediately!</strong>
-</div>
 
         
         <!-- ===================== -->
@@ -50,7 +51,8 @@
         <!-- ===================== -->
         <!-- Call To Action        -->
         <!-- ===================== -->
-        <p class="cta center-text"><strong>Limited availability. Apply now!</strong></p>
+        <p class="cta center-text">
+            <strong>Limited availability. Apply now!</strong></p>
 
         <!-- ===================== -->
         <!-- Application Form      -->
@@ -61,7 +63,7 @@
             <input type="text" id="name" required>
 
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" required>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g., 5551234567" required>
 
             <label for="email">Email Address</label>
             <input type="email" id="email" required>
@@ -137,25 +139,18 @@
 
     </div>
 
-    <!-- ===================== -->
-    <!-- Form Script            -->
-    <!-- ===================== -->
+    <!-- ================================== -->
+    <!-- JS Form Script Handling            -->
+    <!-- ================================== -->
    
-<script>
-document.getElementById('applicationForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // prevent default submission for now
-    document.getElementById('confirmationMessage').style.display = 'block';
-    this.reset(); // optional: clear form
-});
-
-    document.getElementById('applicationForm').addEventListener('submit', function(e) {
-    e.preventDefault(); 
-    document.getElementById('confirmationMessage').style.display = 'block';
-    document.getElementById('paymentBlock').style.display = 'block'; // reveal payment instructions
-    this.reset();
-});
-
-</script>
+    <script>
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // prevent page reload
+            document.getElementById('confirmationMessage').style.display = 'block'; // show confirmation
+            document.getElementById('paymentBlock').style.display = 'block'; // reveal payment
+            this.reset(); // clear form fields
+        });
+    </script>
 
     
 </body>
