@@ -220,3 +220,53 @@ button:hover {
     font-weight: bold;
     color: #b71c1c;
 }
+
+/* =====================
+   FORM STYLING
+===================== */
+form {
+    max-width: 400px; /* keeps form narrow on desktop and mobile */
+    margin: 0 auto 20px; /* center horizontally, add bottom spacing */
+    padding: 15px;
+    border: 2px solid #ff9800;
+    border-radius: 8px;
+    background: #fff8e1;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #ff5722;
+    outline: none;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #b30000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #ff5722;
+}
