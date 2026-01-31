@@ -124,6 +124,24 @@ button:hover {
 }
 
 /* =====================
+   DETAILS SPACING
+===================== */
+.details ul {
+    margin-bottom: 20px;
+}
+
+/* =====================
+   SECTION SPACING
+===================== */
+.details {
+    margin-bottom: 20px;
+}
+
+.cta {
+    margin-bottom: 25px;
+}
+
+/* =====================
    ANIMATION
 ===================== */
 @keyframes fadeIn {
