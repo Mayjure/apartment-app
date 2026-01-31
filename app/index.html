@@ -1,6 +1,87 @@
-<!-- ===================== -->
-<!-- Application Form     -->
-<!-- ===================== -->
-<form>
-    ...
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1BR Shared Apartment – Apply Now</title>
+
+    <!-- ===================== -->
+    <!-- Stylesheet Link       -->
+    <!-- ===================== -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===================== -->
+    <!-- Main Container        -->
+    <!-- ===================== -->
+    <div class="container">
+
+        <!-- ===================== -->
+        <!-- Header Section        -->
+        <!-- ===================== -->
+        <h1>1 Bedroom Apartment (Shared)</h1>
+        <p class="price">$125 / week</p>
+
+        <!-- ===================== -->
+        <!-- Apartment Details     -->
+        <!-- ===================== -->
+        <div class="details">
+            <ul>
+                <li>Shared 1BR apartment</li>
+                <li>2 months down to move in</li>
+                <li>$50 application fee</li>
+                <li>Immediate availability</li>
+            </ul>
+        </div>
+
+        <!-- ===================== -->
+        <!-- Call To Action        -->
+        <!-- ===================== -->
+        <p class="cta">Limited availability. Apply now.</p>
+
+        <!-- ===================== -->
+        <!-- Application Form      -->
+        <!-- ===================== -->
+        <form id="applicationForm">
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required>
+
+            <label for="movein">Desired Move-in Date</label>
+            <input type="date" id="movein" required>
+
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" rows="4"></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+
+        <!-- ===================== -->
+        <!-- Disclaimer            -->
+        <!-- ===================== -->
+        <p class="disclaimer">
+            $50 application fee • Submission does not guarantee approval
+        </p>
+
+    </div>
+
+    <!-- ===================== -->
+    <!-- Form Script            -->
+    <!-- ===================== -->
+    <script>
+        document.getElementById("applicationForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Application received. We will contact you shortly.");
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
