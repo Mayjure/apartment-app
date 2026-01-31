@@ -142,6 +142,20 @@ button:hover {
 }
 
 /* =====================
+   BADGE STYLING
+===================== */
+.badge {
+    display: inline-block;
+    background: #ff9800;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* =====================
    ANIMATION
 ===================== */
 @keyframes fadeIn {
