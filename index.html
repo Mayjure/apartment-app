@@ -65,6 +65,13 @@
             <button type="submit">Submit Application</button>
         </form>
 
+<!-- =====================
+     SUBMIT CONFIRMATION
+===================== -->
+<div id="confirmationMessage" class="center-text" style="display:none; margin-top:15px; color:green; font-weight:bold;">
+    Thank you! Your application has been received. We will review it and contact you shortly.
+</div>        
+        
 
 <!-- =====================
      URGENCY NOTICE
@@ -84,7 +91,7 @@
 <!-- =====================
      PAYMENT INSTRUCTIONS
 ===================== -->
-<div class="payment-box center-text">
+<div id="paymentBlock" class="payment-box" style="display:none;">
 
     <h2>Application Fee Submission</h2>
 
@@ -123,13 +130,23 @@
     <!-- ===================== -->
     <!-- Form Script            -->
     <!-- ===================== -->
-    <script>
-        document.getElementById("applicationForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-            alert("Application received. We will contact you shortly.");
-            this.reset();
-        });
-    </script>
+   
+<script>
+document.getElementById('applicationForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent default submission for now
+    document.getElementById('confirmationMessage').style.display = 'block';
+    this.reset(); // optional: clear form
+});
 
+    document.getElementById('applicationForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+    document.getElementById('confirmationMessage').style.display = 'block';
+    document.getElementById('paymentBlock').style.display = 'block'; // reveal payment instructions
+    this.reset();
+});
+
+</script>
+
+    
 </body>
 </html>
