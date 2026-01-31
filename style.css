@@ -1,111 +1,20 @@
 /* =====================
-   GLOBAL RESET & BASE
+   GLOBAL RESET
 ===================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* =====================
-   PAGE BACKGROUND
+   BODY & BACKGROUND
 ===================== */
 body {
-    background: linear-gradient(135deg, #8b0000, #ff8c00, #ffd700);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #222;
-}
-
-/* =====================
-   MAIN CONTAINER
-===================== */
-.container {
-    background: #ffffff;
-    width: 100%;
-    max-width: 600px;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-    animation: fadeIn 0.6s ease-in-out;
-}
-
-/* =====================
-   HEADINGS
-===================== */
-h1 {
-    text-align: center;
-    color: #b30000;
-    margin-bottom: 10px;
-}
-
-h2 {
-    text-align: center;
-    color: #ff8c00;
-    margin-bottom: 20px;
-}
-
-/* =====================
-   INFO BLOCK
-===================== */
-.info {
-    background: #fff4e6;
-    border-left: 6px solid #ff8c00;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-/* =====================
-   FORM ELEMENTS
-===================== */
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input, textarea, select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 15px;
-}
-
-/* =====================
-   CALL-TO-ACTION BUTTON
-===================== */
-button {
-    width: 100%;
-    background: linear-gradient(90deg, #b30000, #ff4500);
-    color: white;
-    padding: 14px;
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* =====================
-   SMALL TEXT
-===================== */
-.small-text {
-    font-size: 13px;
-    color: #555;
-    text-align: center;
-    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #fff8e1;
+    color: #333;
+    padding: 20px;
 }
 
 /* =====================
@@ -116,29 +25,36 @@ button:hover {
 }
 
 /* =====================
-   CENTERED LIST FIX
-===================== */
-.center-text ul {
-    list-style-position: inside;
-    padding-left: 0;
-}
-
-/* =====================
    DETAILS SPACING
-===================== */
-.details ul {
-    margin-bottom: 20px;
-}
-
-/* =====================
-   SECTION SPACING
 ===================== */
 .details {
     margin-bottom: 20px;
 }
 
+.details ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+/* Subtle hover effect on list items */
+.details ul li {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.details ul li:hover {
+    transform: scale(1.05);
+    color: #ff5722;
+}
+
+/* =====================
+   CALL TO ACTION
+===================== */
 .cta {
     margin-bottom: 25px;
+    font-size: 18px;
+    color: #b30000;
+    font-weight: bold;
 }
 
 /* =====================
@@ -153,94 +69,20 @@ button:hover {
     font-weight: bold;
     margin-bottom: 15px;
     font-size: 16px;
+    transition: transform 0.2s ease, background 0.2s ease;
 }
 
-/* =====================
-   ANIMATION
-===================== */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* =====================
-   PAYMENT INSTRUCTIONS
-===================== */
-.payment-box {
-    margin-top: 25px;
-    padding: 20px;
-    background: #fff3cd;
-    border: 2px solid #ff9800;
-    border-radius: 8px;
-}
-
-.payment-box h2 {
-    color: #b30000;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.payment-warning {
-    background: #ffe0b2;
-    padding: 10px;
-    border-left: 5px solid #ff5722;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.payment-details {
-    list-style: none;
-    margin-bottom: 15px;
-}
-
-.payment-details li {
-    margin-bottom: 8px;
-}
-
-.payment-methods {
-    background: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.payment-note {
-    font-size: 13px;
-    color: #444;
-    text-align: center;
-}
-
-/* =====================
-   URGENCY NOTICE
-===================== */
-.urgency-box {
-    background: #ffebee;
-    border: 2px dashed #d32f2f;
-    padding: 15px;
-    margin-top: 20px;
-    border-radius: 8px;
-}
-
-.urgency-box p {
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #b71c1c;
+.badge:hover {
+    transform: scale(1.05);
+    background: #ff5722;
 }
 
 /* =====================
    FORM STYLING
 ===================== */
 form {
-    max-width: 400px; /* keeps form narrow on desktop and mobile */
-    margin: 0 auto 20px; /* center horizontally, add bottom spacing */
+    max-width: 400px;
+    margin: 0 auto 20px;
     padding: 15px;
     border: 2px solid #ff9800;
     border-radius: 8px;
@@ -260,7 +102,6 @@ form textarea {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
     font-size: 16px;
 }
 
@@ -283,4 +124,26 @@ form button {
 
 form button:hover {
     background: #ff5722;
+}
+
+/* =====================
+   PAYMENT BLOCK STYLING
+===================== */
+.payment-box {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid #ff9800;
+    border-radius: 8px;
+    background-color: #fff3e0;
+}
+
+.payment-box ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.payment-box p {
+    margin-bottom: 10px;
 }
